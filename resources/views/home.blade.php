@@ -51,7 +51,7 @@
                 <th>Số lượng</th>
                 <th>Đơn giá</th>
                 <th style="background-color:#80d4ff;">Tổng cộng</th>
-                <th>Thành tiền</th>
+                <th style="background-color:#ffbf80;">Thành tiền</th>
                 <th>Tổng tiền chiết khấu</th>
                 <th>Thành tiền sau chiết khấu</th>
                 <th>Đơn giá sau chiết khấu</th>
