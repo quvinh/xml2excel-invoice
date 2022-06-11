@@ -157,7 +157,7 @@
                                     <td>" + parseFloat(tienSauCK).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.vat + "</td>\
                                     <td>" + parseFloat(tienVat).toFixed(2).toLocaleString("en-US") + "</td>\
-                                    <td>" + parseFloat(tienSauCK + tienVat.toFixed(2)).toLocaleString("en-US") + "</td> </tr>")
+                                    <td>" + parseFloat(tienSauCK + tienVat).toFixed(2).toLocaleString("en-US") + "</td> </tr>")
                                 })
                                 $('#excelTable').DataTable({
                                     dom: 'Bfrtip',
