@@ -145,12 +145,12 @@
                                     <td>" + item.product + "</td>\
                                     <td>" + item.unit + "</td>\
                                     <td>" + item.count + "</td>\
-                                    <td>" + parseFloat(item.money).toLocaleString("en-US") + "</td>\
-                                    <td>" + parseFloat(item.count * item.money).toLocaleString("en-US") + "</td>\
+                                    <td>" + parseFloat(item.money).toFixed(2).toLocaleString("en-US") + "</td>\
+                                    <td>" + parseFloat(item.count * item.money).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.moneyDiscount + "</td>\
-                                    <td>" + parseFloat(tienSauCK).toLocaleString("en-US") + "</td>\
+                                    <td>" + parseFloat(tienSauCK).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.vat + "</td>\
-                                    <td>" + parseFloat(tienVat).toLocaleString("en-US") + "</td>\
+                                    <td>" + parseFloat(tienVat).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + parseFloat(tienSauCK + tienVat).toFixed(2).toLocaleString("en-US") + "</td> </tr>")
                                 })
                                 $('#excelTable').DataTable({
