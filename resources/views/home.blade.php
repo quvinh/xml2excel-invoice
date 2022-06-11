@@ -116,6 +116,7 @@
                                         codeTax: mst,
                                         supplier: ncc,
                                         address: diachi,
+                                        type: $(index).find("HHDVu>TChat").text(),
                                         product: $(index).find("HHDVu>THHDVu").text(),
                                         unit: $(index).find("HHDVu>DVTinh").text(),
                                         money: (parseFloat($(index).find("HHDVu>DGia").text())).toString(),
@@ -140,7 +141,7 @@
                                     <td>" + item.date + "</td>\
                                     <td>" + item.supplier + "</td>\
                                     <td>" + item.address + "</td>\
-                                    <td>" + "" + "</td>\
+                                    <td>" + item.type + "</td>\
                                     <td>" + item.product + "</td>\
                                     <td>" + item.unit + "</td>\
                                     <td>" + item.count + "</td>\
