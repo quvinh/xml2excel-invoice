@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -18,7 +19,12 @@
             <div class="card-body">
                 <div class="mb-3">
                     <label for="formFileMultiple" class="form-label">Chọn file XML</label>
-                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                        </div>
+                        <div class="col-md-2"><button class="btn btn-warning" onClick="window.location.reload();"><i class="bi-arrow-clockwise bi-spin"></i> Làm mới</button></div>
+                    </div>
                 </div>
                 <div class="list-group">
                     <a href="#" class="list-group-item list-group-item-action"><i style="font-weight:bold;">File không chuyển đổi được: <span id="countError">0</span></i></a>
@@ -146,12 +152,12 @@
                                     <td>" + item.unit + "</td>\
                                     <td>" + item.count + "</td>\
                                     <td>" + parseFloat(item.money).toFixed(2).toLocaleString("en-US") + "</td>\
-                                    <td>" + parseFloat(item.count * item.money).toFixed(2).toLocaleString("en-US") + "</td>\
+                                    <td>" + parseFloat(item.count * item.money.toFixed(2)).toLocaleString("en-US") + "</td>\
                                     <td>" + item.moneyDiscount + "</td>\
                                     <td>" + parseFloat(tienSauCK).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.vat + "</td>\
                                     <td>" + parseFloat(tienVat).toFixed(2).toLocaleString("en-US") + "</td>\
-                                    <td>" + parseFloat(tienSauCK + tienVat).toFixed(2).toLocaleString("en-US") + "</td> </tr>")
+                                    <td>" + parseFloat(tienSauCK + tienVat.toFixed(2)).toLocaleString("en-US") + "</td> </tr>")
                                 })
                                 $('#excelTable').DataTable({
                                     dom: 'Bfrtip',
