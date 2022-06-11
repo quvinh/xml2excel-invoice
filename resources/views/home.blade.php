@@ -34,7 +34,7 @@
         </div>
     </div>
     <hr>
-    <table id="excelTable" class="table table-bordered table-hover" style="width: 150%;">
+    <table id="excelTable" class="table table-bordered table-hover border-primary" style="width: 150%;">
         <thead>
             <tr>
                 <th style="width:5px;">STT</th>
