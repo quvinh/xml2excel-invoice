@@ -147,9 +147,11 @@
                                 $('#excelTable').DataTable().destroy();
                                 // $('tbody').html();
                                 listHHDVu && listHHDVu.map((item, index) => {
+                                    var tienCK = item.moneyDiscount;
+                                    if (isNaN(item.moneyDiscount)) tienCK = 0;
                                     var tienthue = parseInt((item.vat).replace('%', ''));
-                                    var tienSauCK = parseFloat(item.count * item.money - item.moneyDiscount);
-                                    var tienVat = parseFloat(item.count * item.money * parseFloat(tienthue / 100));
+                                    var tienSauCK = parseFloat(item.count * item.money - tienCK);
+                                    var tienVat = parseFloat(tienSauCK * parseFloat(tienthue / 100));
                                     $('tbody').append(
                                         "<tr> <td>" + item.no + "</td>\
                                     <td>" + item.number + "</td>\
