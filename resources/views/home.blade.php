@@ -91,6 +91,8 @@
     <script>
         $(document).ready(function() {
             $("#formFileMultiple").change(function(event) {
+                $('#excelTable').DataTable().destroy();
+                $('tbody').html('')
                 let listHHDVu = [];
                 const page = parseInt(event.target.files.length);
                 let stt = 0;
