@@ -152,7 +152,7 @@
                                     <td>" + item.unit + "</td>\
                                     <td>" + item.count + "</td>\
                                     <td>" + parseFloat(item.money).toFixed(2).toLocaleString("en-US") + "</td>\
-                                    <td>" + parseFloat(item.count * item.money.toFixed(2)).toLocaleString("en-US") + "</td>\
+                                    <td>" + parseFloat(item.count * item.money).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.moneyDiscount + "</td>\
                                     <td>" + parseFloat(tienSauCK).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.vat + "</td>\
