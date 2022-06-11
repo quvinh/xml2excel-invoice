@@ -40,7 +40,9 @@
                 <th style="width:5px;">STT</th>
                 <th>Mẫu số</th>
                 <th>Ký hiệu</th>
+                <th>Số HĐ</th>
                 <th>Ngày HĐ</th>
+                <th>MST</th>
                 <th style="width:15%">Nhà cung cấp</th>
                 <th style="width:20%">Địa chỉ</th>
                 <th>Tính chất</th>
@@ -62,7 +64,9 @@
                 <th>STT</th>
                 <th>Mẫu số</th>
                 <th>Ký hiệu</th>
+                <th>Số HĐ</th>
                 <th>Ngày HĐ</th>
+                <th>MST</th>
                 <th>Nhà cung cấp</th>
                 <th>Địa chỉ</th>
                 <th>Tính chất</th>
@@ -120,6 +124,7 @@
                                     listHHDVu.push({
                                         no: parseInt(stt + 1),
                                         number: mshdon,
+                                        numberInvoice: shdon,
                                         symbol: khhdon,
                                         date: dateInvoice[2]+'-'+dateInvoice[1]+'-'+dateInvoice[0],
                                         codeTax: mst,
@@ -147,7 +152,9 @@
                                         "<tr> <td>" + item.no + "</td>\
                                     <td>" + item.number + "</td>\
                                     <td>" + item.symbol + "</td>\
+                                    <td>" + item.numberInvoice + "</td>\
                                     <td>" + item.date + "</td>\
+                                    <td>" + item.codeTax + "</td>\
                                     <td>" + item.supplier + "</td>\
                                     <td>" + item.address + "</td>\
                                     <td>" + item.type + "</td>\
