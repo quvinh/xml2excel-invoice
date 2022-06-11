@@ -34,56 +34,56 @@
         </div>
     </div>
     <hr>
-    <table id="excelTable" class="table table-bordered table-hover border-primary" style="width: 150%;">
+    <table id="excelTable" class="table table-bordered table-hover display table-sm" style="width: 170%;">
         <thead>
             <tr>
-                <th style="width:5px;">STT</th>
-                <th>Mẫu số</th>
-                <th>Ký hiệu</th>
-                <th>Số HĐ</th>
-                <th>Ngày HĐ</th>
-                <th>MST</th>
-                <th style="width:15%">Nhà cung cấp</th>
-                <th style="width:20%">Địa chỉ</th>
-                <th>Tính chất</th>
-                <th>Tên hàng hoá, dịch vụ</th>
-                <th>ĐVT</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th>
-                <th style="background-color:#80d4ff;">Tổng cộng</th>
-                <th style="background-color:#ffbf80;">Thành tiền</th>
-                <th>Tổng tiền chiết khấu</th>
-                <th>Thành tiền sau chiết khấu</th>
-                <th>Đơn giá sau chiết khấu</th>
-                <th>Thuế suất</th>
-                <th>Tiền thuế</th>
-                <th>Thành tiền có thuế GTGT</th>
+                <th style="width:5px; font-style: italic; background-color:#adc1eb;">STT</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Mẫu số</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Ký hiệu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Số HĐ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Ngày HĐ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">MST</th>
+                <th style="width:10%; font-style: italic; background-color:#adc1eb;">Nhà cung cấp</th>
+                <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tính chất</th>
+                <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên hàng hoá, dịch vụ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">ĐVT</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Số lượng</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Đơn giá</th>
+                <th style="background-color:#80d4ff; font-style: italic;">Tổng cộng</th>
+                <th style="background-color:#ffbf80; font-style: italic;">Thành tiền</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tổng tiền chiết khấu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Thành tiền sau chiết khấu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Đơn giá sau chiết khấu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Thuế suất</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tiền thuế</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Thành tiền có thuế GTGT</th>
             </tr>
         </thead>
         <tbody></tbody>
         <tfoot>
             <tr>
-                <th>STT</th>
-                <th>Mẫu số</th>
-                <th>Ký hiệu</th>
-                <th>Số HĐ</th>
-                <th>Ngày HĐ</th>
-                <th>MST</th>
-                <th>Nhà cung cấp</th>
-                <th>Địa chỉ</th>
-                <th>Tính chất</th>
-                <th>Tên hàng hoá, dịch vụ</th>
-                <th>ĐVT</th>
-                <th>Số lượng</th>
-                <th>Đơn giá</th>
-                <th style="background-color:#80d4ff;">Tổng cộng</th>
-                <th style="background-color:#ffbf80;">Thành tiền</th>
-                <th>Tổng tiền chiết khấu</th>
-                <th>Thành tiền sau chiết khấu</th>
-                <th>Đơn giá sau chiết khấu</th>
-                <th>Thuế suất</th>
-                <th>Tiền thuế</th>
-                <th>Thành tiền có thuế GTGT</th>
+                <th style="width:5px; font-style: italic; background-color:#adc1eb;">STT</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Mẫu số</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Ký hiệu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Số HĐ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Ngày HĐ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">MST</th>
+                <th style="width:10%; font-style: italic; background-color:#adc1eb;">Nhà cung cấp</th>
+                <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tính chất</th>
+                <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên hàng hoá, dịch vụ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">ĐVT</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Số lượng</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Đơn giá</th>
+                <th style="background-color:#80d4ff; font-style: italic;">Tổng cộng</th>
+                <th style="background-color:#ffbf80; font-style: italic;">Thành tiền</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tổng tiền chiết khấu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Thành tiền sau chiết khấu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Đơn giá sau chiết khấu</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Thuế suất</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tiền thuế</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Thành tiền có thuế GTGT</th>
             </tr>
         </tfoot>
     </table>
@@ -98,6 +98,20 @@
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
     <script>
         $(document).ready(function() {
+            $('#excelTable').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5',
+                    'pageLength'
+                ],
+                lengthMenu: [
+                    [10, 25, 50, -1],
+                    ['10 rows', '25 rows', '50 rows', 'Show all']
+                ],
+            });
             $("#formFileMultiple").change(function(event) {
                 $('#excelTable').DataTable().destroy();
                 $('tbody').html('')
@@ -130,7 +144,7 @@
                                         number: mshdon,
                                         numberInvoice: shdon,
                                         symbol: khhdon,
-                                        date: dateInvoice[2]+'-'+dateInvoice[1]+'-'+dateInvoice[0],
+                                        date: dateInvoice[2] + '-' + dateInvoice[1] + '-' + dateInvoice[0],
                                         codeTax: mst,
                                         supplier: ncc,
                                         address: diachi,
