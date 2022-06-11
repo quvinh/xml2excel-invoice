@@ -50,6 +50,7 @@
                 <th>ĐVT</th>
                 <th>Số lượng</th>
                 <th>Đơn giá</th>
+                <th style="background-color:#80d4ff;">Tổng cộng</th>
                 <th>Thành tiền</th>
                 <th>Tổng tiền chiết khấu</th>
                 <th>Thành tiền sau chiết khấu</th>
@@ -75,7 +76,8 @@
                 <th>ĐVT</th>
                 <th>Số lượng</th>
                 <th>Đơn giá</th>
-                <th>Thành tiền</th>
+                <th style="background-color:#80d4ff;">Tổng cộng</th>
+                <th style="background-color:#ffbf80;">Thành tiền</th>
                 <th>Tổng tiền chiết khấu</th>
                 <th>Thành tiền sau chiết khấu</th>
                 <th>Đơn giá sau chiết khấu</th>
@@ -166,7 +168,8 @@
                                     <td>" + item.unit + "</td>\
                                     <td>" + item.count + "</td>\
                                     <td>" + parseFloat(item.money).toFixed(2).toLocaleString("en-US") + "</td>\
-                                    <td>" + parseFloat(item.count * item.money).toFixed(2).toLocaleString("en-US") + "</td>\
+                                    <td style='background-color:#b3e6ff;'>" + parseFloat(item.total).toFixed(2).toLocaleString("en-US") + "</td>\
+                                    <td style='background-color:#ffd9b3;'>" + parseFloat(item.count * item.money).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.moneyDiscount + "</td>\
                                     <td>" + parseFloat(tienSauCK).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + parseFloat(tienSauCK / item.count).toFixed(2).toLocaleString("en-US") + "</td>\
