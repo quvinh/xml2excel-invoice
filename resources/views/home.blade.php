@@ -113,12 +113,13 @@
                                 var mst = $(xmlDoc).find("NBan>MST").text();
                                 var ncc = $(xmlDoc).find("NBan>Ten").text();
                                 var diachi = $(xmlDoc).find("NBan>DChi").text();
+                                var dateInvoice = (ngayhdon.replace('/', '-')).split('-');
                                 $(xmlDoc).find("HHDVu").map((item, index) => {
                                     listHHDVu.push({
                                         no: parseInt(stt + 1),
                                         number: mshdon,
                                         symbol: khhdon,
-                                        date: ngayhdon,
+                                        date: dateInvoice[2]+'-'+dateInvoice[1]+'-'+dateInvoice[0],
                                         codeTax: mst,
                                         supplier: ncc,
                                         address: diachi,
