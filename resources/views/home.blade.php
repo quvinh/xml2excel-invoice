@@ -53,6 +53,7 @@
                 <th>Thành tiền</th>
                 <th>Tổng tiền chiết khấu</th>
                 <th>Thành tiền sau chiết khấu</th>
+                <th>Đơn giá sau chiết khấu</th>
                 <th>Thuế suất</th>
                 <th>Tiền thuế</th>
                 <th>Thành tiền có thuế GTGT</th>
@@ -77,6 +78,7 @@
                 <th>Thành tiền</th>
                 <th>Tổng tiền chiết khấu</th>
                 <th>Thành tiền sau chiết khấu</th>
+                <th>Đơn giá sau chiết khấu</th>
                 <th>Thuế suất</th>
                 <th>Tiền thuế</th>
                 <th>Thành tiền có thuế GTGT</th>
@@ -165,6 +167,7 @@
                                     <td>" + parseFloat(item.count * item.money).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.moneyDiscount + "</td>\
                                     <td>" + parseFloat(tienSauCK).toFixed(2).toLocaleString("en-US") + "</td>\
+                                    <td>" + parseFloat(tienSauCK / item.count).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + item.vat + "</td>\
                                     <td>" + parseFloat(tienVat).toFixed(2).toLocaleString("en-US") + "</td>\
                                     <td>" + parseFloat(tienSauCK + tienVat).toFixed(2).toLocaleString("en-US") + "</td> </tr>")
