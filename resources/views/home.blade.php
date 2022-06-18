@@ -41,6 +41,7 @@
                 <th style="font-style: italic; background-color:#adc1eb;">Mẫu số</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Ký hiệu</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Số HĐ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tính chất HĐ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Ngày HĐ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">MST</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Nhà cung cấp</th>
@@ -67,6 +68,7 @@
                 <th style="font-style: italic; background-color:#adc1eb;">Mẫu số</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Ký hiệu</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Số HĐ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">Tính chất HĐ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Ngày HĐ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">MST</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Nhà cung cấp</th>
@@ -138,6 +140,9 @@
                                 var ncc = $(xmlDoc).find("NBan>Ten").text();
                                 var diachi = $(xmlDoc).find("NBan>DChi").text();
                                 var dateInvoice = (ngayhdon.replace('/', '-')).split('-');
+                                var tchdon = $(xmlDoc).find("TTHDLQuan>TCHDon").text();
+                                if(tchdon === "1") tchdon = "Thay thế";
+                                else if(tchdon === "2") tchdon = "Điều chỉnh";
                                 $(xmlDoc).find("HHDVu").map((item, index) => {
                                     listHHDVu.push({
                                         no: parseInt(stt + 1),
@@ -149,6 +154,7 @@
                                         supplier: ncc,
                                         address: diachi,
                                         type: $(index).find("HHDVu>TChat").text(),
+                                        typeInvoice: tchdon,
                                         product: $(index).find("HHDVu>THHDVu").text(),
                                         unit: $(index).find("HHDVu>DVTinh").text(),
                                         money: (parseFloat($(index).find("HHDVu>DGia").text())).toString(),
@@ -173,6 +179,7 @@
                                     <td>" + item.number + "</td>\
                                     <td>" + item.symbol + "</td>\
                                     <td>" + item.numberInvoice + "</td>\
+                                    <td>" + item.typeInvoice + "</td>\
                                     <td>" + item.date + "</td>\
                                     <td>" + item.codeTax + "</td>\
                                     <td>" + item.supplier + "</td>\
