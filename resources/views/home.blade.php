@@ -48,6 +48,7 @@
                 <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Tính chất</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên hàng hoá, dịch vụ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">HTTT</th>
                 <th style="font-style: italic; background-color:#adc1eb;">ĐVT</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Số lượng</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Đơn giá</th>
@@ -75,6 +76,7 @@
                 <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Tính chất</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên hàng hoá, dịch vụ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">HTTT</th>
                 <th style="font-style: italic; background-color:#adc1eb;">ĐVT</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Số lượng</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Đơn giá</th>
@@ -141,6 +143,7 @@
                                 var diachi = $(xmlDoc).find("NBan>DChi").text();
                                 var dateInvoice = (ngayhdon.replace('/', '-')).split('-');
                                 var tchdon = $(xmlDoc).find("TTHDLQuan>TCHDon").text();
+                                var htttoan = $(xmlDoc).find("TTChung>HTTToan").text();
                                 if(tchdon === "1") tchdon = "Thay thế";
                                 else if(tchdon === "2") tchdon = "Điều chỉnh";
                                 $(xmlDoc).find("HHDVu").map((item, index) => {
@@ -163,6 +166,7 @@
                                         vat: $(index).find("HHDVu>TSuat").text(),
                                         vatMoney: (parseFloat($(index).find("TTin>DLieu").text())).toString(),
                                         total: (parseFloat($(index).find("HHDVu>ThTien").text())).toString(),
+                                        payment: htttoan,
                                     })
                                     stt = parseInt(stt + 1);
                                 });
@@ -186,6 +190,7 @@
                                     <td>" + item.address + "</td>\
                                     <td>" + item.type + "</td>\
                                     <td>" + item.product + "</td>\
+                                    <td>" + item.payment + "</td>\
                                     <td>" + item.unit + "</td>\
                                     <td>" + item.count + "</td>\
                                     <td>" + parseFloat(item.money).toFixed(2).toLocaleString("en-US") + "</td>\
