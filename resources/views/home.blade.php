@@ -152,7 +152,7 @@
                                         number: mshdon,
                                         numberInvoice: shdon,
                                         symbol: khhdon,
-                                        date: dateInvoice[2] + '-' + dateInvoice[1] + '-' + dateInvoice[0],
+                                        date: dateInvoice[2] + '/' + dateInvoice[1] + '/' + dateInvoice[0],
                                         codeTax: mst,
                                         supplier: ncc,
                                         address: diachi,
