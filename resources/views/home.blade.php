@@ -46,6 +46,9 @@
                 <th style="font-style: italic; background-color:#adc1eb;">MST</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Nhà cung cấp</th>
                 <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">MST bên mua</th>
+                <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên bên mua</th>
+                <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ bên mua</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Tính chất</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên hàng hoá, dịch vụ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">HTTT</th>
@@ -74,6 +77,9 @@
                 <th style="font-style: italic; background-color:#adc1eb;">MST</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Nhà cung cấp</th>
                 <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ</th>
+                <th style="font-style: italic; background-color:#adc1eb;">MST bên mua</th>
+                <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên bên mua</th>
+                <th style="width:18%; font-style: italic; background-color:#adc1eb;">Địa chỉ bên mua</th>
                 <th style="font-style: italic; background-color:#adc1eb;">Tính chất</th>
                 <th style="width:10%; font-style: italic; background-color:#adc1eb;">Tên hàng hoá, dịch vụ</th>
                 <th style="font-style: italic; background-color:#adc1eb;">HTTT</th>
@@ -154,8 +160,11 @@
                                         symbol: khhdon,
                                         date: dateInvoice[2] + '/' + dateInvoice[1] + '/' + dateInvoice[0],
                                         codeTax: mst,
+                                        codeTaxBuyer: $(xmlDoc).find("NMua>MST").text(),
                                         supplier: ncc,
+                                        buyer: $(xmlDoc).find("NMua>Ten").text(),
                                         address: diachi,
+                                        addressBuyer: $(xmlDoc).find("NMua>DChi").text(),
                                         type: $(index).find("HHDVu>TChat").text(),
                                         typeInvoice: tchdon,
                                         product: $(index).find("HHDVu>THHDVu").text(),
@@ -188,6 +197,9 @@
                                     <td>" + item.codeTax + "</td>\
                                     <td>" + item.supplier + "</td>\
                                     <td>" + item.address + "</td>\
+                                    <td>" + item.codeTaxBuyer + "</td>\
+                                    <td>" + item.buyer + "</td>\
+                                    <td>" + item.addressBuyer + "</td>\
                                     <td>" + item.type + "</td>\
                                     <td>" + item.product + "</td>\
                                     <td>" + item.payment + "</td>\
