@@ -21,7 +21,7 @@
                     <label for="formFileMultiple" class="form-label">Chọn file XML</label>
                     <div class="row">
                         <div class="col-md-10">
-                            <input class="form-control" type="file" id="formFileMultiple" accept="text/xml" multiple>
+                            <input class="form-control" type="file" id="formFileMultiple" accept=".xml" multiple>
                         </div>
                         <div class="col-md-2"><button class="btn btn-warning" onClick="window.location.reload();"><i class="bi-arrow-clockwise bi-spin"></i> Làm mới</button></div>
                     </div>
