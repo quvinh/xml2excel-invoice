@@ -140,16 +140,30 @@
                         if (event.target.files[i].type == "text/xml") {
                             var xmlDoc = $.parseXML(reader.result);
                             if ($(xmlDoc).find("HDon>MCCQT").text()) {
-                                var mshdon = $(xmlDoc).find("TTChung>KHMSHDon").text();
-                                var khhdon = $(xmlDoc).find("TTChung>KHHDon").text();
-                                var shdon = $(xmlDoc).find("TTChung>SHDon").text();
-                                var ngayhdon = $(xmlDoc).find("TTChung>NLap").text();
-                                var mst = $(xmlDoc).find("NBan>MST").text();
-                                var ncc = $(xmlDoc).find("NBan>Ten").text();
-                                var diachi = $(xmlDoc).find("NBan>DChi").text();
-                                var dateInvoice = (ngayhdon.replace('/', '-')).split('-');
-                                var tchdon = $(xmlDoc).find("TTHDLQuan>TCHDon").text();
-                                var htttoan = $(xmlDoc).find("TTChung>HTTToan").text();
+                                const mshdon = $(xmlDoc).find("TTChung>KHMSHDon").text();
+                                const khhdon = $(xmlDoc).find("TTChung>KHHDon").text();
+                                const shdon = $(xmlDoc).find("TTChung>SHDon").text();
+                                const ngayhdon = $(xmlDoc).find("TTChung>NLap").text();
+                                const tchdon = $(xmlDoc).find("TTHDLQuan>TCHDon").text();
+                                const htttoan = $(xmlDoc).find("TTChung>HTTToan").text();
+                                const ncc = $(xmlDoc).find("NBan>Ten").text();
+                                const mst = $(xmlDoc).find("NBan>MST").text();
+                                const diachi = $(xmlDoc).find("NBan>DChi").text();
+                                const tenmua = $(xmlDoc).find("NMua>Ten").text();
+                                const mstmua = $(xmlDoc).find("NMua>MST").text();
+                                const dcmua = $(xmlDoc).find("NMua>DChi").text();
+                                const tchat = $(index).find("HHDVu>TChat").text();
+                                const thhdv = $(index).find("HHDVu>THHDVu").text();
+                                const dvt = $(index).find("HHDVu>DVTinh").text();
+                                const dongia = (parseFloat($(index).find("HHDVu>DGia").text())).toString();
+                                const soluong = (parseFloat($(index).find("HHDVu>SLuong").text())).toString();
+                                const sotienck = (parseFloat($(index).find("HHDVu>STCKhau").text())).toString();
+                                const thue = $(index).find("HHDVu>TSuat").text();
+                                const tienthue = (parseFloat($(index).find("TTin>DLieu").text())).toString();
+                                const tong = (parseFloat($(index).find("HHDVu>ThTien").text())).toString();
+
+                                const dateInvoice = (ngayhdon.replace('/', '-')).split('-');
+                                const getDate = dateInvoice[2] + '/' + dateInvoice[1] + '/' + dateInvoice[0];
                                 if(tchdon === "1") tchdon = "Thay thế";
                                 else if(tchdon === "2") tchdon = "Điều chỉnh";
                                 $(xmlDoc).find("HHDVu").map((item, index) => {
@@ -158,23 +172,23 @@
                                         number: mshdon,
                                         numberInvoice: shdon,
                                         symbol: khhdon,
-                                        date: dateInvoice[2] + '/' + dateInvoice[1] + '/' + dateInvoice[0],
+                                        date: getDate,
                                         codeTax: mst,
-                                        codeTaxBuyer: $(xmlDoc).find("NMua>MST").text(),
+                                        codeTaxBuyer: mstmua,
                                         supplier: ncc,
-                                        buyer: $(xmlDoc).find("NMua>Ten").text(),
+                                        buyer: tenmua,
                                         address: diachi,
-                                        addressBuyer: $(xmlDoc).find("NMua>DChi").text(),
-                                        type: $(index).find("HHDVu>TChat").text(),
+                                        addressBuyer: dcmua,
+                                        type: tchat,
                                         typeInvoice: tchdon,
-                                        product: $(index).find("HHDVu>THHDVu").text(),
-                                        unit: $(index).find("HHDVu>DVTinh").text(),
-                                        money: (parseFloat($(index).find("HHDVu>DGia").text())).toString(),
-                                        count: (parseFloat($(index).find("HHDVu>SLuong").text())).toString(),
-                                        moneyDiscount: (parseFloat($(index).find("HHDVu>STCKhau").text())).toString(),
-                                        vat: $(index).find("HHDVu>TSuat").text(),
-                                        vatMoney: (parseFloat($(index).find("TTin>DLieu").text())).toString(),
-                                        total: (parseFloat($(index).find("HHDVu>ThTien").text())).toString(),
+                                        product: thhdv,
+                                        unit: dvt,
+                                        money: dongia,
+                                        count: soluong,
+                                        moneyDiscount: sotienck,
+                                        vat: thue,
+                                        vatMoney: tienthue,
+                                        total: tong,
                                         payment: htttoan,
                                     })
                                     stt = parseInt(stt + 1);
