@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <!-- <link rel="icon" type="image/x-icon" href="{{ asset('convert.ico') }}"> -->
-    <link rel="icon" type="image/x-icon" href="https://xml2excel.herokuapp.com/convert.ico">
-    <title>Chuyển đổi</title>
+    <title>Document</title>
 </head>
 
 <body>
@@ -154,15 +152,6 @@
                                 const tenmua = $(xmlDoc).find("NMua>Ten").text();
                                 const mstmua = $(xmlDoc).find("NMua>MST").text();
                                 const dcmua = $(xmlDoc).find("NMua>DChi").text();
-                                const tchat = $(index).find("HHDVu>TChat").text();
-                                const thhdv = $(index).find("HHDVu>THHDVu").text();
-                                const dvt = $(index).find("HHDVu>DVTinh").text();
-                                const dongia = (parseFloat($(index).find("HHDVu>DGia").text())).toString();
-                                const soluong = (parseFloat($(index).find("HHDVu>SLuong").text())).toString();
-                                const sotienck = (parseFloat($(index).find("HHDVu>STCKhau").text())).toString();
-                                const thue = $(index).find("HHDVu>TSuat").text();
-                                const tienthue = (parseFloat($(index).find("TTin>DLieu").text())).toString();
-                                const tong = (parseFloat($(index).find("HHDVu>ThTien").text())).toString();
 
                                 const dateInvoice = (ngayhdon.replace('/', '-')).split('-');
                                 const getDate = dateInvoice[2] + '/' + dateInvoice[1] + '/' + dateInvoice[0];
@@ -181,16 +170,16 @@
                                         buyer: tenmua,
                                         address: diachi,
                                         addressBuyer: dcmua,
-                                        type: tchat,
+                                        type: $(index).find("HHDVu>TChat").text(),
                                         typeInvoice: tchdon,
-                                        product: thhdv,
-                                        unit: dvt,
-                                        money: dongia,
-                                        count: soluong,
-                                        moneyDiscount: sotienck,
-                                        vat: thue,
-                                        vatMoney: tienthue,
-                                        total: tong,
+                                        product: $(index).find("HHDVu>THHDVu").text(),
+                                        unit: $(index).find("HHDVu>DVTinh").text(),
+                                        money: (parseFloat($(index).find("HHDVu>DGia").text())).toString(),
+                                        count: (parseFloat($(index).find("HHDVu>SLuong").text())).toString(),
+                                        moneyDiscount: (parseFloat($(index).find("HHDVu>STCKhau").text())).toString(),
+                                        vat: $(index).find("HHDVu>TSuat").text(),
+                                        vatMoney: (parseFloat($(index).find("TTin>DLieu").text())).toString(),
+                                        total: (parseFloat($(index).find("HHDVu>ThTien").text())).toString(),
                                         payment: htttoan,
                                     })
                                     stt = parseInt(stt + 1);
