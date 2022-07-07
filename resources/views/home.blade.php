@@ -144,7 +144,7 @@
                                 const khhdon = $(xmlDoc).find("TTChung>KHHDon").text();
                                 const shdon = $(xmlDoc).find("TTChung>SHDon").text();
                                 const ngayhdon = $(xmlDoc).find("TTChung>NLap").text();
-                                const tchdon = $(xmlDoc).find("TTHDLQuan>TCHDon").text();
+                                var tchdon = $(xmlDoc).find("TTHDLQuan>TCHDon").text();
                                 const htttoan = $(xmlDoc).find("TTChung>HTTToan").text();
                                 const ncc = $(xmlDoc).find("NBan>Ten").text();
                                 const mst = $(xmlDoc).find("NBan>MST").text();
