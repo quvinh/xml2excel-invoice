@@ -10,11 +10,25 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <title>Document</title>
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
+    <title>Chuyển đổi</title>
 </head>
 
 <body>
     <div class="container">
+        @php
+        $url = app('request')->route()->uri();
+        @endphp
+        <ul class="nav justify-content-center nav-pills">
+            <li class="nav-item">
+                <a class="nav-link {{ $url=='/'?'active':'' }}" aria-current="page" href="{{ url('/') }}">XMLs to EXCEL</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {{ $url=='zip'?'active':'' }}" href="{{ url('/zip') }}">ZIPs to EXCEL</a>
+            </li>
+        </ul>
+        <br>
         <div class="card">
             <div class="card-body">
                 <div class="mb-3">
@@ -155,8 +169,8 @@
 
                                 const dateInvoice = (ngayhdon.replace('/', '-')).split('-');
                                 const getDate = dateInvoice[2] + '/' + dateInvoice[1] + '/' + dateInvoice[0];
-                                if(tchdon === "1") tchdon = "Thay thế";
-                                else if(tchdon === "2") tchdon = "Điều chỉnh";
+                                if (tchdon === "1") tchdon = "Thay thế";
+                                else if (tchdon === "2") tchdon = "Điều chỉnh";
                                 $(xmlDoc).find("HHDVu").map((item, index) => {
                                     listHHDVu.push({
                                         no: parseInt(stt + 1),
