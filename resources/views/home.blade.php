@@ -9,10 +9,11 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
-    <title>Chuyển đổi</title>
+    <title>Chuyển đổi XML</title>
 </head>
 
 <body>
@@ -30,6 +31,9 @@
         </ul>
         <br>
         <div class="card">
+            <div class="card-header text-center">
+                <h5><i class="fa fa-file-code-o" style="color:#ff6c16;"></i> Chuyển file Xml thành file Excel</h5>
+            </div>
             <div class="card-body">
                 <div class="mb-3">
                     <label for="formFileMultiple" class="form-label">Chọn file XML</label>
