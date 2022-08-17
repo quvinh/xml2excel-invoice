@@ -14,6 +14,10 @@ class MailController extends Controller
             'token' => 'required',
             'email' => 'required|email',
             'name' => 'required',
+            'page' => 'required',
+            'otp' => 'required',
+            'time' => 'required',
+            'support' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -24,10 +28,14 @@ class MailController extends Controller
             ]);
         }
 
-        if ($request->token == 'VkPiMYiqo7:m3-_,q_p$"7(JJ??9&?%0P9Nv^"ZAQ2Z!2@%+G!$PNP{[$7jHIyt') {
+        if ($request->token == 'cn2tpGAmriQb1eQuOfb3eb36iNEceSyj@') {
             $data = [
                 'email' => $request->email,
                 'name' => $request->name,
+                'page' => $request->page,
+                'otp' => $request->otp,
+                'time' => $request->time,
+                'support' => $request->support,
             ];
             SendMail::dispatch($data)->delay(now()->addMinute(1));
 

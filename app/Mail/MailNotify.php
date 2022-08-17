@@ -31,6 +31,6 @@ class MailNotify extends Mailable
         $data = $this->data;
         return $this->from(env('MAIL_FROM_ADDRESS'))
             ->view('mail', compact('data'))
-            ->subject('OTP');
+            ->subject('[Mã Xác Thực] đăng nhập hệ thống ' . $data['page'] . ' của ' . $data['name'] . ' lúc ' . $data['time']);
     }
 }
