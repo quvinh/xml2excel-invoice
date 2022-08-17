@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +21,5 @@ Route::get('/', function () {
 Route::get('/zip', function () {
     return view('zip');
 });
+
+Route::get('/mail', [MailController::class, 'sendOTP']);
